@@ -7,13 +7,13 @@ import { of, Observable } from 'rxjs';
 })
 export class LottoService {
     private tickets: Array<LottoTicket> = [];
-    private rolledNumbers: Array<Number>;
+    private rolledNumbers: Array<Number> = [];
     private resultsPublished: Boolean = false;
 
     constructor() { }
 
     purchaseTicket(ticket: LottoTicket) {
-        if (this.resultsPublished) {
+        if (this.resultsPublished === true) {
             this.tickets = [];
             this.rolledNumbers = [];
             this.resultsPublished = false;
@@ -22,8 +22,10 @@ export class LottoService {
         this.tickets.push(ticket);
     }
 
-    publishResults(rolledNumbers: Array<Number>) {
+    publishResults(rolledNumbers: Number[]) {
         this.rolledNumbers = rolledNumbers;
+
+        console.log(this.rolledNumbers);
         this.resultsPublished = true;
     }
 

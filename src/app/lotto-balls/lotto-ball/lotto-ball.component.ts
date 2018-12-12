@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { LottoService } from 'src/app/lotto.service';
 
 @Component({
     selector: 'lotto-ball',
@@ -9,11 +10,14 @@ export class LottoBallComponent implements OnInit {
 
     @Input() number: Number;
     @Input() size: Number = 100;
-    @Input() correct: Boolean = false;
+    @Input() displayResult: Boolean = false;
 
-    constructor() { }
+    constructor(private lottoService: LottoService) { }
 
     ngOnInit() {
     }
 
+    displayCorrect(number) {
+        return this.displayResult && this.lottoService.isNumberCorrect(number);
+    }
 }

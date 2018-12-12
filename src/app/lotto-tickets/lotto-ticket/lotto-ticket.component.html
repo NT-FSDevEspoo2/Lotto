@@ -1,4 +1,4 @@
 <div class="lotto-ticket">
     <div>Ticket {{index}}: </div>
-    <lotto-ball *ngFor="let number of ticket.getNumbers" [number]="number" [size]="50" correct="{{displayCorrect}}}"></lotto-ball>
+    <lotto-ball *ngFor="let number of ticket.getNumbers" [number]="number" [size]="50" [displayResult]="true"></lotto-ball>
 </div>

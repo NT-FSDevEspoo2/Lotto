@@ -11,7 +11,7 @@ const rolledNumberCount = 7;
 })
 export class LottoBallsComponent implements OnInit {
     availableNumbers: Array<Number> = [];
-    rolledNumbers = [];
+    rolledNumbers: Array<Number> = [];
 
     constructor(private lottoService: LottoService) {
     }
@@ -42,7 +42,7 @@ export class LottoBallsComponent implements OnInit {
         for (var i = 0; i < rolledNumberCount; i++) {
             var randomNumber = Math.floor(Math.random() * (this.availableNumbers.length - 1) + 1);
 
-            var rolledNumber = this.availableNumbers.splice(randomNumber, 1);
+            var rolledNumber = this.availableNumbers.splice(randomNumber, 1)[0];
 
             this.rolledNumbers.push(rolledNumber);
         }
