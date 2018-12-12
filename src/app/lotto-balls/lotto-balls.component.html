@@ -1,0 +1,11 @@
+<div class="lotto-balls">
+    <div *ngIf="rolledNumbers.length > 0">
+        <div *ngFor="let rolledNumber of rolledNumbers">
+            <lotto-ball number="{{rolledNumber}}"></lotto-ball>
+        </div>
+    </div>
+
+    <div *ngIf="rolledNumbers.length === 0">
+        <input type="button" class="lotto-balls-roll-button" value="Roll" (click)="roll()">
+    </div>
+</div>

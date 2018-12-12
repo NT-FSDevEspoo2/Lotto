@@ -1,0 +1,26 @@
+.lotto-balls {
+    height: 150px;
+}
+
+.lotto-balls-roll-button {
+    margin-top: 20px;
+    padding: 10px 55px 10px 55px;
+    font-size: 60px;
+    color: white;
+    background-color: #00a94e;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 3px 3px #222222;
+}
+
+.lotto-balls-roll-button:hover {
+    background-color: #10b95e;
+}
+
+.lotto-balls-roll-button:active {
+    top: 2px;
+    left: 2px;
+    background-color: #20c96e;
+    box-shadow: 1px 1px #222222;
+    position: relative;
+}

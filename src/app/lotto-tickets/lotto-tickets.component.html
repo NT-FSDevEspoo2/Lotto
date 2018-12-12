@@ -1,0 +1,7 @@
+<div class="lotto-tickets">
+    <div class="lotto-tickets-title">
+        Your Tickets
+    </div>
+
+    <lotto-ticket *ngFor="let ticket of tickets; let i = index" [ticket]="ticket" [index]="i + 1"></lotto-ticket>
+</div>

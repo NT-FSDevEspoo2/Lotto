@@ -1,0 +1,10 @@
+.lotto-tickets {
+    margin-top: 40px;
+    width: 490px;
+    float: left;
+}
+
+.lotto-tickets-title {
+    font-size: 20px;
+    font-weight: bold;
+}
