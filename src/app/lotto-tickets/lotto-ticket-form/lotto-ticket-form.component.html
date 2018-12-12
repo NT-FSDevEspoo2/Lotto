@@ -1,9 +1,10 @@
 <div class="lotto-ticket-form">
     <div class="lotto-ticket-form-title">Buy Tickets:</div>
 
-    <div class="lotto-ticket-form-selectable" *ngFor="let number of array(40); let i = index;">
-        {{i + 1}}
+    <div class="lotto-ticket-form-selectable" [ngClass]="{'lotto-ticket-form-selectable-selected': selectedNumbers.includes(i + 1)}"
+        *ngFor="let number of array(40); let i = index;" (click)="select(i+1)">
+        <div class="lotto-ticket-form-selectable-text">{{i + 1}}</div>
     </div>
 
-    <input type="button" class="lotto-ticket-form-button" value="Buy" (click)="purchase()">
+    <input type="button" class="lotto-ticket-form-button" value="Buy" (click)="purchase()" [attr.disabled]="!validate() ? '' : null">
 </div>

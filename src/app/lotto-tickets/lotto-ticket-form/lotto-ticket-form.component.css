@@ -14,12 +14,26 @@
     margin: 6px 6px 6px 6px;
     width: 45px;
     height: 45px;
-    background-color: #aaaaaa;
-    color: black;
-    font-size: 16px;
+    background-color: #888888;
+    border: 2px solid black;
+    color: white;
+    font-size: 24px;
     border-radius: 4px;
     cursor: pointer;
     float: left;
+    position: relative;
+}
+
+.lotto-ticket-form-selectable-selected {
+    background-color: green;
+}
+
+.lotto-ticket-form-selectable-text {
+    font-weight: bold;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
 }
 
 .lotto-ticket-form-button {
@@ -42,5 +56,11 @@
     left: 2px;
     background-color: #20c96e;
     box-shadow: 1px 1px #222222;
+    position: relative;
+}
+
+.lotto-ticket-form-button:disabled {
+    background-color: #444444;
+    color: #888888;
     position: relative;
 }
